@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project : Gallery Box</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main-box">
+        <marquee style="color:white" bgcolor="black" behavior="scroll">This website is generated for the practise
+            purposes and created by the help of languages like HTML, CSS and Javascript</marquee>
+        <div class="nav">
+            <div class="icon">
+                <span class="btn-one">
+                    <label for="check">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                </span>
+                <a href="#">Apni Gallery</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>Newsletter</a>
+                <a href="#"><i class="fa-solid fa-wallet"></i>Donate</a>
+                <a href="#"><i class="fa-solid fa-globe"></i>Know More</a>
+
+            </div>
+
+        </div>
+        <input type="checkbox" name="" id="check">
+
+        <div class="sidebar-menu">
+            <div class="logo">
+                <a href="#">Apni Gallery</a>
+            </div>
+            <div class="btn-two">
+                <label for="check">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-image"></i>
+                        <a href="#gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-share-from-square"></i>
+                        <a href="#">Shortcuts</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-photo-film"></i>
+                        <a href="#">Exhibits</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <a href="#">Events</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-store"></i>
+                        <a href="#">Store</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="#">Contacts</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-comments"></i>
+                        <a href="#">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="socialmedia">
+                <a href="https://www.linkedin.com/in/adarsh-kumar-jha-88a736241/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-hackerrank"></i></a>
+                <a href="#"><i class="fa-solid fa-code"></i></a>
+            </div>
+        </div>
+        <div class="upside">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+    </div>
+    <div class="gallery" id="gallery">
+        <div class="gallery-heading">
+            <h2>Our Gallery</h2>
+        </div>
+        <div class="gallery-container">
+
+            <div class="card">
+                <img src="image8.jpg" id="img-1" alt="A mountain"> <div id="one" oneclick="one()"></div>
+            </div>
+            <div class="arrow" id="left-arrow"><i class="fa-solid fa-caret-left" class="left-icon" onclick="larrow()"></i></div>
+            <div class="arrow" id="right-arrow"><i class="fa-solid fa-caret-right" class="right-icon" onclick="rarrow()"></i></div>
+        </div>
+    </div>
+    <script>
+        var rem,inc=0,dec=0;
+        function larrow(){
+            inc=inc+1;
+            rem=inc%5;
+            if(rem==1)document.getElementById("img-1").src="image17.jpg";
+            if(rem==2)document.getElementById("img-1").src="image18.jpg";
+            if(rem==3)document.getElementById("img-1").src="image20.jpg";
+            if(rem==4)document.getElementById("img-1").src="image21.jpg";
+            if(rem==0)document.getElementById("img-1").src="image8.jpg";
+        }
+        function rarrow(){
+            inc=inc-1;
+            rem=inc%5;
+            if(rem==1||rem==-1)document.getElementById("img-1").src="image17.jpg";
+            if(rem==2||rem==-2)document.getElementById("img-1").src="image18.jpg";
+            if(rem==3||rem==-3)document.getElementById("img-1").src="image20.jpg";
+            if(rem==4||rem==-4)document.getElementById("img-1").src="image21.jpg";
+            if(rem==0)document.getElementById("img-1").src="image8.jpg";
+        }
+    </script>
+</body>
+
+</html>

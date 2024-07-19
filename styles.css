@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Main box  */
+.main-box {
+    background-image: url("image19.jpg");
+    height: 100vh;
+    background-size: 100% 100%;
+    animation: change 15s ease-in-out infinite;
+}
+
+@keyframes change {
+
+    0%,
+    100% {
+        background-image: url("image19.jpg");
+    }
+
+    34% {
+        background-image: url("image15.jpg")
+    }
+
+    67% {
+        background-image: url("image10.jpg")
+    }
+}
+
+marquee {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+/* First Button */
+.btn-one i {
+    color: rgba(246, 249, 246, 0.933);
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    transition: 0.2s linear;
+    left: 8px;
+    line-height: 60px;
+    /*for increase the height between two line*/
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    position: absolute;
+    left: -300px;
+    height: 90vh;
+    width: 300px;
+    background-color: rgba(11, 11, 11, 0.539);
+    transition: 0.5s;
+}
+
+/* Sidebar menu's logo */
+.sidebar-menu .logo {
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(246, 249, 246, 0.933);
+}
+
+/* Sidebar menu's anchor tag */
+.sidebar-menu .logo a {
+    position: absolute;
+    left: 60px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Sidebar menu */
+.sidebar-menu .menu {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+/* Button two */
+.sidebar-menu .btn-two i {
+    color: rgba(246, 249, 246, 0.933);
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    left: 270px;
+    /* opacity:0; */
+    cursor: pointer;
+}
+
+/* Sidebar menu's list item  */
+.sidebar-menu .menu li {
+    margin: 6px;
+    padding: 12px 20px;
+}
+
+.sidebar-menu .menu i,
+a {
+    color: rgba(246, 249, 246, 0.933);
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.sidebar-menu .menu i {
+    padding-right: 16px;
+}
+
+/* Social Media bar */
+.sidebar-menu .socialmedia {
+    position: absolute;
+    left: 15%;
+    bottom: 40px;
+}
+
+.sidebar-menu .socialmedia i {
+    color: rgba(246, 249, 246, 0.933);
+    opacity: 0.5;
+    padding: 10px;
+}
+
+/* To remove checkbox  */
+#check {
+    display: none;
+}
+
+/* Hover effects */
+.sidebar-menu .menu li:hover {
+    box-shadow: 0 0 6px rgba(252, 250, 250, 0.969);
+}
+
+.btn-two i:hover {
+    font-size: 30px;
+}
+
+.btn-one i:hover {
+    font-size: 25px;
+}
+
+.socialmedia i:hover {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+#check:checked~.sidebar-menu {
+    left: 0;
+}
+
+#check:checked~.btn-one {
+    display: none;
+}
+
+/* Navigation Bar  */
+.nav {
+    display: block;
+    background-color: rgba(11, 11, 11, 0.539);
+    width: 100%;
+    margin-top: -10px;
+    padding-top: 0;
+}
+
+.nav .icon {
+    position: relative;
+    display: block;
+    font-size: 35px;
+    background-color: rgba(11, 11, 11, 0.539);
+}
+
+.nav .icon a {
+    margin: 0 0 0 30px;
+    padding-left:2px;
+}
+.nav .icon i{
+    padding:5px;
+}
+
+.nav .icon a:hover {
+    box-shadow: 0 0 6px rgba(252, 250, 250, 0.969);
+}
+
+.main-box .upside {
+    position: fixed;
+    margin: 0 auto;
+    font-size: 30px;
+    bottom: 10px;
+}
+
+/* card hover effect */
+#gallery {
+    transition: 1s linear;
+}
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.gallery-heading {
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.card {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: grey;
+    left: 5%;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.arrow {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    font-size: 50px;
+    text-align: justify;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.278);
+}
+
+.arrow i {
+    padding: 5px 5px;
+    bottom: 10px;
+    position: relative;
+}
+
+#left-arrow {
+    left: 5%;
+}
+
+#right-arrow {
+    right:5%;
+}
+
+/* Arrow hover */
+.arrow:hover {
+    background-color: black;
+}
+.arrow i:hover{
+    color:white;
+}
